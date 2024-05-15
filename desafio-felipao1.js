@@ -25,7 +25,33 @@ Se XP for maior ou igual a 10.001 = Radiante
 Ao final deve se exibir uma mensagem:
 "O Herói de nome **{nome}** está no nível de **{nivel}**"*/
 
-let nome = prompt("Digite seu nome: ")
-let xpHero = prompt("Digite a quantidade de XP do seu herói: ")
+const entrada = require('prompt-sync')({sigint: true})
 
-console.log(nome + xpHero)
+let nome = entrada("Digite seu nome: ")
+let xpHero = entrada("Digite o XP do seu herói: ")
+console.log("Meu nome é " + nome +  " e meu herói tem " + xpHero +  " de XP")
+
+if(xpHero <= 1000){
+    console.log("Seu herói está no nível Ferro")
+
+}else if(xpHero >= 1001 && xpHero <=2000){
+    console.log("Seu herói está no nível Bronze")
+
+}else if(xpHero >= 2001 && xpHero <=5000){
+    console.log("Seu herói está no nível Prata")
+
+}else if(xpHero >= 5001 && xpHero <=7000 ){
+    console.log("Seu herói está no nível Ouro")
+
+}else if(xpHero >= 7001 && xpHero <=8000 ){
+    console.log("Seu herói está no nível Platina")
+
+}else if(xpHero >= 8001 && xpHero <=9000 ){
+    console.log("Seu herói está no nível Ascendente")
+
+}else if(xpHero >= 9001 && xpHero <=10000 ){
+    console.log("Seu herói está no nível Imortal")
+    
+}else{
+    console.log("Seu herói está no nível Radiante")
+}
